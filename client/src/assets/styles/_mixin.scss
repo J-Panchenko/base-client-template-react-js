@@ -1,0 +1,117 @@
+// === fonts === //
+$font-family: 'Poppins', sans-serif;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+
+@mixin fontRegular($size: 16px, $line-height: 24px) {
+  font-family: $font-family;
+  font-weight: $regular;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0rem;
+}
+
+@mixin fontMedium($size: 14px, $line-height: 21px) {
+  font-family: $font-family;
+  font-weight: $medium;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0rem;
+}
+
+@mixin fontSemibold($size: 30px, $line-height: 45px) {
+  font-family: $font-family;
+  font-weight: $semibold;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0rem;
+}
+
+// === flex-container === //
+
+@mixin flexRowWrap($gap: 0, $align-items: center, $justify-content: center) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin flexRowNoWrap($gap: 0, $align-items: center, $justify-content: center) {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin flexColumnWrap($gap: 0, $align-items: center, $justify-content: center) {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin flexColumnNoWrap($gap: 0, $align-items: center, $justify-content: center) {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+// === scroll === //
+
+@mixin scroll {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($color: $secondary, $alpha: 0.5);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: rgba($color: $secondary, $alpha: 0.8);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 8px;
+  }
+}
+
+// === spinner === //
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}

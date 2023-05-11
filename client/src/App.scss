@@ -1,0 +1,182 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixin';
+@import 'assets/styles/reset';
+
+// ===== Button sizes ===== //
+
+.xs {
+  @include fontMedium(12px, 18px);
+  --padding: 8px 12px;
+  --padding-icon: 2px;
+  --gap: 6px;
+  --icon-width: 12px;
+  --icon-height: 12px;
+}
+
+.sm {
+  @include fontMedium(14px, 20px);
+  --padding: 10px 14px;
+  --padding-icon: 4px;
+  --gap: 8px;
+  --icon-width: 14px;
+  --icon-height: 14px;
+}
+
+.md {
+  @include fontMedium(16px, 24px);
+  --padding: 12px 16px;
+  --padding-icon: 6px;
+  --gap: 10px;
+  --icon-width: 16px;
+  --icon-height: 16px;
+}
+
+.lg {
+  @include fontMedium(18px, 26px);
+  --padding: 14px 18px;
+  --padding-icon: 8px;
+  --gap: 12px;
+  --icon-width: 18px;
+  --icon-height: 18px;
+}
+
+.xl {
+  @include fontMedium(20px, 28px);
+  --padding: 16px 20px;
+  --padding-icon: 10px;
+  --gap: 14px;
+  --icon-width: 20px;
+  --icon-height: 20px;
+}
+
+// ===== Button colors ===== //
+
+.primary {
+  --text-color: #{$white};
+  --bg-color: #{$primary};
+  --bg-color-rgb: #{$primary-rgb};
+  --bg-color-hover: #{$primary-hover};
+}
+
+.secondary {
+  --text-color: #{$white};
+  --bg-color: #{$secondary};
+  --bg-color-rgb: #{$secondary-rgb};
+  --bg-color-hover: #{$secondary-hover};
+}
+
+.danger {
+  --text-color: #{$white};
+  --bg-color: #{$danger};
+  --bg-color-rgb: #{$danger-rgb};
+  --bg-color-hover: #{$danger-hover};
+}
+
+.warning {
+  --text-color: #{$white};
+  --bg-color: #{$warning};
+  --bg-color-rgb: #{$warning-rgb};
+  --bg-color-hover: #{$warning-hover};
+}
+
+.success {
+  --text-color: #{$white};
+  --bg-color: #{$success};
+  --bg-color-rgb: #{$success-rgb};
+  --bg-color-hover: #{$success-hover};
+}
+
+// ===== Button variants ===== //
+
+.solid {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+
+  &:hover,
+  &:active {
+    background-color: var(--bg-color-hover);
+    border-color: var(--bg-color-hover);
+  }
+
+  &:disabled {
+    background-color: rgba($color: var(--bg-color-rgb), $alpha: 0.2);
+    border-color: rgba($color: var(--bg-color-rgb), $alpha: 0.05);
+    cursor: not-allowed;
+  }
+}
+
+.outline {
+  color: var(--bg-color);
+  background-color: transparent;
+  border: 1px solid var(--bg-color);
+
+  &:hover,
+  &:active {
+    background-color: rgba($color: var(--bg-color-rgb), $alpha: 0.2);
+    color: var(--bg-color);
+  }
+
+  &:disabled {
+    color: rgba($color: var(--bg-color-rgb), $alpha: 0.4);
+    background-color: transparent;
+    border-color: rgba($color: var(--bg-color-rgb), $alpha: 0.2);
+    cursor: not-allowed;
+  }
+}
+
+.ghost {
+  color: var(--bg-color);
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &:hover,
+  &:active {
+    background-color: rgba($color: var(--bg-color-rgb), $alpha: 0.2);
+    color: var(--bg-color);
+  }
+
+  &:disabled {
+    color: rgba($color: var(--bg-color-rgb), $alpha: 0.5);
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: not-allowed;
+  }
+}
+
+.link {
+  color: var(--bg-color);
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    color: rgba($color: var(--bg-color-rgb), $alpha: 0.5);
+    text-decoration: none;
+    cursor: not-allowed;
+  }
+}
+
+.unstyled {
+  color: inherit;
+  background-color: inherit;
+  border: inherit;
+
+  &:hover,
+  &:active {
+    color: inherit;
+    background-color: inherit;
+    border: inherit;
+  }
+
+  &:disabled {
+    color: inherit;
+    background-color: inherit;
+    border: inherit;
+    cursor: not-allowed;
+  }
+}

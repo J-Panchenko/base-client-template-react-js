@@ -1,0 +1,32 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixin';
+
+.modal-sample {
+  @include flexColumnNoWrap(20px);
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 478px;
+  height: fit-content;
+  padding: 40px;
+  border-radius: 4px;
+  background-color: $white;
+  box-shadow: $shadow-modal;
+
+  .icon-button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+
+  &__title {
+    @include fontSemibold(24px, 36px);
+    color: $almost-black;
+  }
+
+  &__buttons {
+    @include flexRowNoWrap(8px);
+    align-self: flex-end;
+  }
+}

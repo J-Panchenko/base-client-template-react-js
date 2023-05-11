@@ -1,0 +1,35 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixin';
+
+.custom-button {
+  @include flexRowNoWrap(var(--gap));
+  font: inherit;
+  text-align: center;
+  padding: var(--padding);
+  border-radius: 8px;
+  height: fit-content;
+  background-color: inherit;
+  border: inherit;
+  color: inherit;
+  transition: $transition;
+
+  .MuiSvgIcon-root {
+    width: var(--icon-width);
+    height: var(--icon-height);
+    color: inherit;
+  }
+
+  svg {
+    width: var(--icon-width);
+    height: var(--icon-height);
+
+    path,
+    circle {
+      stroke: currentColor;
+    }
+  }
+
+  &__text {
+    color: inherit;
+  }
+}

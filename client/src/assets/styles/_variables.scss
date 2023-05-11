@@ -1,0 +1,38 @@
+$white: #FFFFFF;
+
+$almost: #1F1F23;
+$almost-black: #252525;
+
+$primary: #2d57ec;
+$primary-rgb: 45, 87, 236;
+$primary-hover: #1c48e4;
+
+$secondary: #343540;
+$secondary-rgb: 52, 53, 64;
+$secondary-hover: #2d2d38;
+
+$warning: #dc1706;
+$warning-rgb: 220, 23, 6;
+$warning-hover: #c60f05;
+
+$danger: #c03715;
+$danger-rgb: 192, 55, 21;
+$danger-hover: #a82e12;
+
+$success: #34A853;
+$success-rgb: 52, 168, 83;
+$success-hover: #2d9c4b;
+
+$light-blue: #8ea7fd;
+$light-blue-hover: #E3EAFF;
+
+$grey: #E6E6E6;
+$light-grey: #f0f0f0;
+$middle-grey: #717171;
+
+$shadow-input: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+$shadow-button: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+$shadow-selector: 0px 4px 10px rgba(255, 255, 255, 0.2);
+$shadow-modal: 0px 4px 20px 0 rgba(0, 0, 0, 0.25);
+
+$transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 0.1) 0ms;

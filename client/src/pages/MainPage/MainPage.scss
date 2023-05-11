@@ -1,0 +1,33 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixin';
+
+.main-page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $white;
+
+  &__container {
+    @include flexColumnNoWrap(24px, center, flex-start);
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    padding: 28px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include scroll;
+  }
+
+  &__title {
+    @include fontMedium(18px, 32px);
+    color: $almost-black;
+  }
+
+  &__form {
+    @include flexColumnNoWrap(12px, center, flex-start);
+    background-color: rgba($color: $light-blue-hover, $alpha: 0.5);
+    padding: 12px 36px;
+    border-radius: 8px;
+    width: 30%;
+  }
+}

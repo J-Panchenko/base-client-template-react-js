@@ -1,0 +1,19 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixin';
+
+.error-indicator {
+  @include flexColumnNoWrap;
+  width: 100%;
+  max-width: 445px;
+  height: fit-content;
+  margin: 56px auto 24px;
+
+  &__inner {
+    @include flexColumnNoWrap(16px);
+  }
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+}

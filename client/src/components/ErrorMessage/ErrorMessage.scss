@@ -1,0 +1,23 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixin';
+
+.error-message {
+  @include flexRowNoWrap(4px, center, flex-start);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__text {
+    @include fontRegular(12px, 18px);
+    color: $warning;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
